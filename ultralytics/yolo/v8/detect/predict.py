@@ -81,7 +81,7 @@ class DetectionPredictor(BasePredictor):
                     f.write(('%g ' * len(line)).rstrip() % line + '\n')
                     
             if self.args.save or self.args.save_crop or self.args.show:  # Add bbox to image
-            c = int(cls)  # integer class
+                c = int(cls)  # integer class
                 label = None 
                 # c1 = (x1, y1) or top-leftmost coordinate while; c2 = (x2, y2) or bottom-rightmost coordinate
                 # c1 = (x1, y1) or top-leftmost coordinate while; c2 = (x2, y2) or bottom-rightmost coordinate
