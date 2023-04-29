@@ -96,12 +96,12 @@ class DetectionPredictor(BasePredictor):
                 if len(pts) >= 2:
                     radius = math.dist(pts[0],pts[1])
                     if radius > 5:
-                    # draw the circle and centroid on the frame,
-                    # then update the list of tracked points
-                    cv2.circle(im0, center, int(radius), (0, 255, 255), 2)
-                    cv2.circle(im0, center, 5, (0, 0, 255), -1)
-                else:
-                    cv2.circle(im0, center, 5, (0, 0, 255), -1)
+                        # draw the circle and centroid on the frame,
+                        # then update the list of tracked points
+                        cv2.circle(im0, center, int(radius), (0, 255, 255), 2)
+                        cv2.circle(im0, center, 5, (0, 0, 255), -1)
+                    else:
+                        cv2.circle(im0, center, 5, (0, 0, 255), -1)
 
                 #cv2.circle(im0, pnt, 31, (255,18,120), -1) # under circle
                 #cv2.circle(im0, pnt, 20, (252, 15, 190), -1) # visualization if centroid in video! :)
